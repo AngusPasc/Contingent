@@ -79,7 +79,9 @@ uses
   stud_del1 in 'stud_del1.pas' {acc_del},
   acc_rep15 in 'acc_rep15.pas' {acc_spstudlgota},
   jurpos in 'jurpos.pas' {Fjurpos},
-  uDeaneryTools in 'uDeaneryTools.pas';
+  uDeaneryTools in 'uDeaneryTools.pas',
+  Document in 'Sources\Document\Document.pas',
+  WordDocument in 'Sources\Document\WordDocument.pas';
 
 type
   //  класс обработчика событий при активации форм
