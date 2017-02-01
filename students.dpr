@@ -80,8 +80,8 @@ uses
   acc_rep15 in 'acc_rep15.pas' {acc_spstudlgota},
   jurpos in 'jurpos.pas' {Fjurpos},
   uDeaneryTools in 'uDeaneryTools.pas',
-  Document in 'Sources\Document\Document.pas',
-  WordDocument in 'Sources\Document\WordDocument.pas';
+  WordDocument in 'WordDocument.pas',
+  Document in 'Document.pas';
 
 type
   //  класс обработчика событий при активации форм

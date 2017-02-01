@@ -329,14 +329,14 @@ object stud_fak: Tstud_fak
         TabOrder = 4
         OnClick = Button4Click
       end
-      object Button5: TButton
-        Left = 768
-        Top = 336
+      object ButtonStudentReferencePrint: TButton
+        Left = 764
+        Top = 340
         Width = 209
         Height = 26
         Caption = #1057#1087#1088#1072#1074#1082#1072' '#1087#1086' '#1089#1090#1091#1076#1077#1085#1090#1091
         TabOrder = 5
-        OnClick = Button5Click
+        OnClick = ButtonStudentReferencePrintClick
       end
       object Button6: TButton
         Left = 768
@@ -414,10 +414,6 @@ object stud_fak: Tstud_fak
       Font.Style = []
       ImageIndex = 1
       ParentFont = False
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label3: TLabel
         Left = 307
         Top = 8
@@ -1111,10 +1107,6 @@ object stud_fak: Tstud_fak
     object TabSheet3: TTabSheet
       Caption = #1055#1088#1080#1082#1072#1079#1099' '#1087#1086' '#1089#1090#1091#1076#1077#1085#1090#1091
       ImageIndex = 2
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label29: TLabel
         Left = 16
         Top = 21
@@ -1155,6 +1147,7 @@ object stud_fak: Tstud_fak
             FieldName = 'mvdate'
             Title.Alignment = taCenter
             Title.Caption = #1044#1072#1090#1072
+            Width = 64
             Visible = True
           end
           item
@@ -1208,10 +1201,6 @@ object stud_fak: Tstud_fak
     object TabSheet4: TTabSheet
       Caption = #1057#1084#1077#1085#1072' '#1092#1072#1084#1080#1083#1080#1080' ('#1087#1072#1089#1087#1086#1088#1090#1072')'
       ImageIndex = 3
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label31: TLabel
         Left = 35
         Top = 21
@@ -1298,10 +1287,6 @@ object stud_fak: Tstud_fak
     object TabSheet5: TTabSheet
       Caption = ' '#1055#1086#1086#1097#1088#1077#1085#1080#1103' / '#1074#1079#1099#1089#1082#1072#1085#1080#1103
       ImageIndex = 4
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label33: TLabel
         Left = 32
         Top = 21
@@ -1387,10 +1372,6 @@ object stud_fak: Tstud_fak
     object TabSheet6: TTabSheet
       Caption = #1057#1087#1088#1072#1074#1082#1072' - '#1074#1099#1079#1086#1074
       ImageIndex = 5
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label1: TLabel
         Left = 32
         Top = 21

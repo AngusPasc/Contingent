@@ -119,7 +119,7 @@ type
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
-    Button5: TButton;
+    ButtonStudentReferencePrint: TButton;
     Button6: TButton;
     Button7: TButton;
     Button11: TButton;
@@ -162,7 +162,7 @@ type
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
-    procedure Button5Click(Sender: TObject);
+    procedure ButtonStudentReferencePrintClick(Sender: TObject);
     procedure Button6Click(Sender: TObject);
     procedure Button7Click(Sender: TObject);
     procedure Edit37KeyPress(Sender: TObject; var Key: Char);
@@ -1052,23 +1052,15 @@ begin
   Result := qData;
 end;
 
-procedure Tstud_fak.Button5Click(Sender: TObject);
+procedure Tstud_fak.ButtonStudentReferencePrintClick(Sender: TObject);
 begin
-  sp := 1; // простая справка
-  fam := DataModule1.Table_w1.fieldbyname('fam').asstring;
-  stud_name := DataModule1.Table_w1.fieldbyname('name').asstring;
-  stud_pin := DataModule1.Table_w1.fieldbyname('pin').asinteger;
-  stud_fio := trim(DataModule1.Table_w1.fieldbyname('fam').asstring);
-  stud_fio := trim(stud_fio) + ' ' +
-    trim(DataModule1.Table_w1.fieldbyname('name').asstring) + ' ';
-  stud_fio := trim(stud_fio) + ' ' +
-    trim(DataModule1.Table_w1.fieldbyname('vname').asstring);
-  stud_gr := trim(DataModule1.Table_w1.fieldbyname('gruppa').asstring);
-  stud_ls := trim(DataModule1.Table_w1.fieldbyname('ls').asstring);
-  stud_zb := trim(DataModule1.Table_w1.fieldbyname('zachbook').asstring);
-  Enabled := false;
-  Application.CreateForm(Tsprav_acc, sprav_acc);
-  sprav_acc.Show;
+
+  // new procedure of generating document
+  GenerateDocument(GetStudentQueryDataFromFile
+    (ExtractFilePath(Application.ExeName) + '\Queries\StudentReference.sql',
+    DataModule1.Table_w1.DatabaseName, DataModule1.Table_w1pin.asinteger),
+    ExtractFilePath(Application.ExeName) + '\Templates\StudentReference.dot');
+
 end;
 
 function GetGraduationYear(StudentId: integer): integer;
