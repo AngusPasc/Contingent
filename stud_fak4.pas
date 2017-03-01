@@ -1749,9 +1749,7 @@ begin
   i := DataModule1.Table_w1.fieldbyname('spgrup').asinteger;
   Query := TQuery.Create(nil);
   Query.DatabaseName := 'Database2';
-  Query.SQL.text := 'select name from spgrup where pin=:groupCode';
-  Query.Prepare;
-  Query.Params.ParamByName('GroupCode').Value := i;
+  Query.SQL.text := 'select name from spgrup where pin = ' + IntToStr(i);
   Query.Open;
   if Query.Active and (Query.RecordCount > 0) then
     ddd := Query.Fields[0].asstring

@@ -208,8 +208,7 @@ end;
 procedure Tacc_moves.DBLookupComboBox3Click(Sender: TObject);
 begin
   fo := DataModule1.Table_w33.FieldByName('pin').AsInteger;
-  f_spec := 'priz=''1'' and spfak=' + inttostr(fak) + ' and spotd=' +
-    inttostr(fo);
+  f_spec := 'priz=''1'' and spfak=' + inttostr(fak);
   DataModule1.Table_w36.Filter := f_spec;
   DataModule1.Table_w36.Filtered := True;
   DataModule1.Table_w6.Refresh;
@@ -218,7 +217,7 @@ end;
 procedure Tacc_moves.DBLookupComboBox4Click(Sender: TObject);
 begin
   spec := DataModule1.Table_w36.FieldByName('spspec').AsInteger;
-  f_gr := 'spfak=' + inttostr(fak) + ' and spotd=' + inttostr(fo) +
+  f_gr := 'spfak=' + inttostr(fak) +
     ' and spspec=' + inttostr(spec);
   DataModule1.Table_w37.Filter := f_gr;
   DataModule1.Table_w37.Filtered := True;
